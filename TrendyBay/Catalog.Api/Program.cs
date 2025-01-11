@@ -1,24 +1,22 @@
+namespace Catalog.Api;
 
-namespace Catalog.Api
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
-     
-            builder.Services.AddControllers();
-           
+        var builder = WebApplication.CreateBuilder(args);
 
-            var app = builder.Build();
-
-  
-            app.UseAuthorization();
+        builder.Services.AddControllers();
 
 
-            app.MapControllers();
+        var app = builder.Build();
 
-            app.Run();
-        }
+
+        app.UseAuthorization();
+
+
+        app.MapControllers();
+
+        app.Run();
     }
 }
